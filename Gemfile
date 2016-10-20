@@ -43,6 +43,9 @@ gem 'puma'
 # Annotate Rails classes with schema and routes info
 gem 'annotate'
 
+# Rename the application
+gem 'rails-rename', '~> 1.0.0'
+
 group :production do
   # Makes running your Rails app easier. Based on the ideas behind 12factor.net
   gem 'rails_12factor'
@@ -55,6 +58,14 @@ group :development, :test do
   gem 'byebug'
   # MailCatcher runs a super simple SMTP server which catches any message sent to it to display in a web interface
   gem 'mailcatcher', '~> 0.6.5'
+  # rspec-rails is a testing framework for Rails 3+
+  gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+  # factory_girl provides a framework and DSL for defining and using factories
+  gem 'factory_girl_rails', '~> 4.7'
+  # Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc
+  gem 'faker', '~> 1.6', '>= 1.6.6'
+  # Automatic Ruby code style checking tool. Aims to enforce the community-driven Ruby Style Guide
+  gem 'rubocop', '~> 0.44.1'
 end
 
 group :development do
@@ -71,4 +82,3 @@ group :development do
   # Generate a diagram based on application's AR models
   gem 'rails-erd'
 end
-
