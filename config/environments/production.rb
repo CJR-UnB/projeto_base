@@ -1,6 +1,6 @@
 Rails.application.configure do
   # Google Analytics Tracker
-  # GA.tracker = "UA-112233-4"
+  # GA.tracker = 'UA-112233-4'
 
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -79,4 +79,19 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+  # config.action_mailer.default_url_options = { host: '[LINK_DO_HEROKU]' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default charset: 'utf-8'
+
+  ActionMailer::Base.smtp_settings = {
+    address: 'smtp.gmail.com',
+    port: 587,
+    authentication: :plain,
+    domain: 'gmail.com',
+    user_name: ENV['GMAIL_USERNAME'],
+    password: ENV['GMAIL_PASSWORD']
+  }
 end

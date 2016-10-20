@@ -60,12 +60,14 @@ group :development, :test do
   gem 'mailcatcher', '~> 0.6.5'
   # rspec-rails is a testing framework for Rails 3+
   gem 'rspec-rails', '~> 3.5', '>= 3.5.2'
+  # Capybara is an integration testing tool for rack based web applications
+  gem 'capybara', '~> 2.10', '>= 2.10.1'
+  # Capybara for Rails
+  gem 'capybara-rails', '~> 0.0.2'
   # factory_girl provides a framework and DSL for defining and using factories
   gem 'factory_girl_rails', '~> 4.7'
   # Faker, a port of Data::Faker from Perl, is used to easily generate fake data: names, addresses, phone numbers, etc
   gem 'faker', '~> 1.6', '>= 1.6.6'
-  # Automatic Ruby code style checking tool. Aims to enforce the community-driven Ruby Style Guide
-  gem 'rubocop', '~> 0.44.1'
 end
 
 group :development do
@@ -81,4 +83,10 @@ group :development do
   gem 'bundler-audit', '~> 0.5.0'
   # Generate a diagram based on application's AR models
   gem 'rails-erd'
+  # Configurable tool for writing clean and consistent Slim templates
+  gem 'slim_lint', '~> 0.8.2'
+  # Configurable tool for writing clean and consistent SCSS
+  gem 'scss_lint', '~> 0.50.2'
+  # Automatic Ruby code style checking tool. Aims to enforce the community-driven Ruby Style Guide
+  gem 'rubocop', '~> 0.44.1'
 end
