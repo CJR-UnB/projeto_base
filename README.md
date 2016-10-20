@@ -41,7 +41,7 @@ Ele é baseado no Rails 4 e Ruby 2.3.1.
 
 #### Desenvolvimento
 
-O envio de emails em desenvolvimento é feito através MailCatcher pela seguinte configuração:
+O envio de emails em desenvolvimento é feito através MailCatcher pela seguinte configuração, no arquivo `config/environments/development.rb`
 
 ```ruby
 config.action_mailer.delivery_method = :smtp
@@ -59,7 +59,7 @@ $ heroku config:set GMAIL_USERNAME=email@gmail.com
 $ heroku config:set GMAIL_PASSWORD=senha_do_email
 ```
 
-Descomente a linha abaixo e insira o link para a aplicação no Heroku.
+Descomente a linha abaixo no arquivo `config/environments/production.rb` e insira o link para a aplicação no Heroku.
 
 ```ruby
 config.action_mailer.default_url_options = { host: '[LINK_DO_HEROKU]' }
