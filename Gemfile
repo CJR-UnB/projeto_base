@@ -44,7 +44,7 @@ gem 'puma'
 gem 'annotate'
 
 # Rename the application
-gem 'rails-rename', '~> 1.0.0'
+gem 'rename', '~> 1.0', '>= 1.0.2'
 
 group :production do
   # Makes running your Rails app easier. Based on the ideas behind 12factor.net
