@@ -82,7 +82,8 @@ config.action_mailer.default_url_options = { host: '[LINK_DO_HEROKU]' }
 3. Crie a aplicação no GitHub da CJR e dê um push na master. Certifique-se que possui o remote.
 
   ```bash
-  $ git remote add origin git@github.com:unbcjr/[NOME_DO_NOVO_PROJETO].git
+  $ git remote remove origin
+  $ git remote add origin https://github.com/unbcjr/[NOME_DO_PROJETO].git
   $ git push -u origin master
   ```
 
