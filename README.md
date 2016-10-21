@@ -70,7 +70,7 @@ config.action_mailer.default_url_options = { host: '[LINK_DO_HEROKU]' }
 1. Clone a aplicação como novo projeto.
 
   ```bash
-  $ git clone git://https://github.com/unbcjr/projeto_base.git [NOME_DO_NOVO_PROJETO]
+  $ git clone https://github.com/unbcjr/projeto_base.git [NOME_DO_NOVO_PROJETO]
   ```
 
 2. Altere o nome da aplicação.
@@ -79,17 +79,17 @@ config.action_mailer.default_url_options = { host: '[LINK_DO_HEROKU]' }
   $ rails g rename [NOME_DO_NOVO_PROJETO]
   ```
 
-3. Crie a aplicação no GitHub e dê um push na master. Certifique-se que possui o remote.
+3. Crie a aplicação no GitHub da CJR e dê um push na master. Certifique-se que possui o remote.
 
   ```bash
-  $ git remote add origin git@github.com:[MINHA_CONTA_DO_GITHUB]/[NOME_DO_NOVO_PROJETO].git
+  $ git remote add origin git@github.com:unbcjr/[NOME_DO_NOVO_PROJETO].git
   $ git push -u origin master
   ```
 
 4. Execute o script para configurar a aplicação.
 
   ```bash
-  $ bin setup
+  $ bin/setup
   ```
 
 5. Atualize o arquivo `README.md`.
