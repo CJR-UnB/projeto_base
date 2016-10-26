@@ -37,8 +37,11 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use Puma as the app server
-gem 'puma'
+# Use Unicorn as the app server
+gem 'unicorn'
+
+# Use unicorn-rails to start unicorn with 'rails s'
+gem 'unicorn-rails'
 
 # Annotate Rails classes with schema and routes info
 gem 'annotate'
@@ -86,7 +89,7 @@ group :development do
   # Configurable tool for writing clean and consistent Slim templates
   gem 'slim_lint', '~> 0.8.2'
   # Configurable tool for writing clean and consistent SCSS
-  gem 'scss_lint', '~> 0.50.2'
+  gem 'scss_lint', '~> 0.50.2', require: false
   # Automatic Ruby code style checking tool. Aims to enforce the community-driven Ruby Style Guide
   gem 'rubocop', '~> 0.44.1'
 end
