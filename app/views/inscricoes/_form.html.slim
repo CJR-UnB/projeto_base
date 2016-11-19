@@ -1,9 +1,0 @@
-= form_for @inscricao do |f|
-  - if @inscricao.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@inscricao.errors.count, "error")} prohibited this inscricao from being saved:"
-      ul
-        - @inscricao.errors.full_messages.each do |message|
-          li = message
-
-  .actions = f.submit

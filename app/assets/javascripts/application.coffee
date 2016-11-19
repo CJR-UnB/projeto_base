@@ -9,7 +9,3 @@
 #= require turbolinks
 #= require turbolinks-compatibility
 #= require_tree .
-
-$(document).ready ->
-  $('.nav-tabs a').click ->
-    $(this).tab 'show'
