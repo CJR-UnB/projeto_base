@@ -1,0 +1,15 @@
+table.table
+  
+  thead
+    tr
+      th Dado
+      th Resposta
+
+  tbody
+
+    tr
+      td Solicitação de Certificação
+      td = sim_ou_nao(@candidato.in_certificado)
+    tr
+      td Entidade Certificadora
+      td = entidade_certificadora(@candidato)

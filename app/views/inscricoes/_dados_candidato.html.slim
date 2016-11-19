@@ -1,0 +1,43 @@
+table.table
+  
+  thead
+    tr
+      th Dado
+      th Resposta
+
+  tbody
+
+    tr
+      td Número do Candidato
+      td = @candidato.id_candidato
+    tr
+      td Idade
+      td = "#{@candidato.idade} anos"
+    tr
+      td Sexo
+      td = tp_sexo_detailed(@candidato.tp_sexo)
+    tr
+      td Nacionalidade
+      td = nacionalidade_detailed(@candidato.nacionalidade)
+    tr
+      td Local de Nascimento
+      td = "#{@candidato.municipio.municipio} - #{@candidato.unidade_federativa.uf}"
+    tr
+      td Situação de Conclusão do Ensino Médio
+      td = st_conclusao_detailed(@candidato.st_conclusao)
+    tr
+      td Ano de Conclusão do Ensino Médio
+      td = @candidato.ano_concluiu
+    tr
+      td Tipo de Escola do Ensino Médio
+      td = tp_escola_detailed(@candidato.tp_escola)
+    tr
+      td Tipo de instituição que concluiu ou concluirá o Ensino Médio
+      td = in_tp_ensino_detailed(@candidato.in_tp_ensino)
+    tr
+      td Estado Civil
+      td = tp_estado_civil_detailed(@candidato.tp_estado_civil)
+    tr
+      td Cor/Raça
+      td = tp_cor_raca_detailed(@candidato.tp_cor_raca)
+    

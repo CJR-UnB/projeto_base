@@ -1,0 +1,87 @@
+.container-fluid
+  .row[style='margin-bottom: 1em']
+    span[style='padding-left: 30px']
+      | Ciências da Natureza
+  - for i in 46..90 do
+    - unless i.odd?
+      .row
+        .col-md-1
+        .col-md-1.col-lg-1.col-sm-1.cartao_resposta_opcao_number.odd
+          .text-center
+            strong.op_number = i
+        .col-md-1.col-lg-1.col-sm-1.cartao_resposta_opcao.odd
+          - if @prova.tx_respostas_cn[i - 46] == 'A'
+            div.op.marked
+              | A
+          - else
+            div.op
+              | A
+        .col-md-1.col-lg-1.col-sm-1.cartao_resposta_opcao.odd
+          - if @prova.tx_respostas_cn[i - 46] == 'B'
+            div.op.marked
+              | B
+          - else
+            div.op
+              | B
+        .col-md-1.col-lg-1.col-sm-1.cartao_resposta_opcao.odd
+          - if @prova.tx_respostas_cn[i - 46] == 'C'
+            div.op.marked
+              | C
+          - else
+            div.op
+              | C
+        .col-md-1.col-lg-1.col-sm-1.cartao_resposta_opcao.odd
+          - if @prova.tx_respostas_cn[i - 46] == 'D'
+            div.op.marked
+              | D
+          - else
+            div.op
+              | D
+        .col-md-1.col-lg-1.col-sm-1.cartao_resposta_opcao_last.odd
+          - if @prova.tx_respostas_cn[i - 46] == 'E'
+            div.op.marked
+              | E
+          - else
+            div.op
+              | E
+    - else
+      .row
+        .col-md-1
+        .col-md-1.col-lg-1.col-sm-1.cartao_resposta_opcao_number
+          .text-center
+            strong.op_number = i
+        .col-md-1.col-lg-1.col-sm-1.cartao_resposta_opcao
+          - if @prova.tx_respostas_cn[i - 46] == 'A'
+            div.op.marked
+              | A
+          - else
+            div.op
+              | A
+        .col-md-1.col-lg-1.col-sm-1.cartao_resposta_opcao
+          - if @prova.tx_respostas_cn[i - 46] == 'B'
+            div.op.marked
+              | B
+          - else
+            div.op
+              | B
+        .col-md-1.col-lg-1.col-sm-1.cartao_resposta_opcao
+          - if @prova.tx_respostas_cn[i - 46] == 'C'
+            div.op.marked
+              | C
+          - else
+            div.op
+              | C
+        .col-md-1.col-lg-1.col-sm-1.cartao_resposta_opcao
+          - if @prova.tx_respostas_cn[i - 46] == 'D'
+            div.op.marked
+              | D
+          - else
+            div.op
+              | D
+        .col-md-1.col-lg-1.col-sm-1.cartao_resposta_opcao_last
+          - if @prova.tx_respostas_cn[i - 46] == 'E'
+            div.op.marked
+              | E
+          - else
+            div.op
+              | E

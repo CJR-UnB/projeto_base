@@ -49,6 +49,10 @@ gem 'annotate'
 # Rename the application
 gem 'rename', '~> 1.0', '>= 1.0.2'
 
+gem 'will_paginate', '~> 3.1.0'
+gem 'will_paginate-bootstrap'
+gem 'bootstrap_progressbar'
+
 group :production do
   # Makes running your Rails app easier. Based on the ideas behind 12factor.net
   gem 'rails_12factor'
